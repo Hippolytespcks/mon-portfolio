@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio by Hippolyte Speckens</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #e46adc;
+            color: white;
+            border: 3px solid #000000;
+            border-radius: 50px 50px 50px 50px;
+            margin: 4rem;
+            margin-top: 0.5rem;
+        }
+
+        header img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #fff;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            align-items: start;
+        }
+
+        details {
+            background: #f1c5f1;
+            border: 2px solid #000000;
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            width: 250px;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        details[open] {
+            border-color: #0077ff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        summary {
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+
+        details ul {
+            margin: .6rem 0;
+            overflow-wrap: break-word;
+            font-size: 0.95rem;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        details a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #0077ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        details a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="image/photomoi.jpg" alt="Photo de profil">
+        <figcaption id="figcation-hs">Hippolyte Speckens</figcaption>
+        <h1>« Ceux qui sont assez fous pour penser qu’ils peuvent changer le monde sont ceux qui le font. »- Steve Jobs
+        </h1>
+    </header>
+
+    <main>
+        <details>
+            <summary>À propos</summary>
+            <p>Diplomé d'un Baccalauréat en STI2D, Mention Très Bien</p>
+            <p>Adresse: 68 rue de Béthune</p>
+            <p>Code postal: 62200</p>
+            <p>Né le: 20/02/2007</p>
+        </details>
+
+        <details>
+            <summary>Compétences générales</summary>
+            <ul>
+                <li>Bonne communication orale et écrite</li>
+                <li>Bon niveau en mathématiques</li>
+                <li>Anglais niveau B1</li>
+                <li>Autonome et organisé</li>
+                <li>Bon esprit d'équipe</li>
+                <li>Prise d'initiative</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Compétences générales</summary>
+            <ul>
+                <li>Bonne connaissance de la suite bureautique, Microsoft Project, Word, Power point</li>
+                <li>Maitrise de SolidWorks (3D)</li>
+                <li>Maitrise HTML/CSS</li>
+                <li>Travail manuel</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Expériences</summary>
+            <p>STAGES</p>
+            <ul>
+                <li>Février 2022 / Accante</li>
+                <li>Mars 2023 / Médiam Communication</li>
+                <li>Juin 2023 / Archifix</li>
+                <li>Septembre 2024 / Association Kalande</li>
+                <li> <a href="expérience.html">→ En savoir plus</a></li>
+
+
+            </ul>
+        </details>
+
+        <details>
+            <summary>Centre d'intérêt</summary>
+            <ul>
+                <li>Jeux vidéo : sim racing, foot, skate..</li>
+                <li>Sports : surf,natation, musculation</li>
+                <li>Dessin</li>
+                <li>Bénévolat : Jardinage, bricolage, déménagement, soutien scolaire</li>
+                <li> <a href="centre-d'intérêt.html">→ En savoir plus</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Contact</summary>
+            <div class=" contact-info">
+                <p>Email : <a href="hippolytespeckens@gmail.com">hippolytespeckens@gmail.com</a></p>
+                <p>Téléphone : 06 98 69 20 31</p>
+                <p>GitHub : <a href="https://github.com/Hippolytespcks/mon-portfolio" target="_blank">Mon
+                        GitHub</a></p>
+            </div>
+        </details>
+        <details>
+            <summary>Projets récents</summary>
+            <p>..</p>
+        </details>
+    </main>
+
+
+</body>
+
+</html>

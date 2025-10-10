@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre d'intérêt - H.S.</title>
+    <style>
+        header {
+            text-align: center;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.5rem;
+            background: #e46adc;
+            color: white;
+            border: 3px solid #000000;
+            border-radius: 50px 50px 50px 50px;
+            margin: 4rem;
+            margin-top: 0.5rem;
+        }
+
+        .jeu {
+            display: flex;
+            align-items: right;
+            gap: 2rem;
+            margin: 2rem auto;
+            padding: 1rem;
+            justify-content: flex-start;
+        }
+
+        .jeu img {
+            width: 500px;
+            height: 500px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 20px solid #000000;
+            margin-left: 0;
+        }
+
+        .jeu .texte {
+            flex: 1;
+            font-size: 1.7rem;
+            line-height: 1.6;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .sport {
+            display: flex;
+            align-items: left;
+            gap: 2rem;
+            margin: 2rem auto;
+            padding: 1rem;
+            justify-content: flex-start;
+        }
+
+        .sport img {
+            width: 500px;
+            height: 400px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 20px solid #358dd0;
+            margin-right: 0;
+        }
+
+        .sport .texte {
+            flex: 1;
+            font-size: 1.7rem;
+            line-height: 1.6;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+
+        @media (max-width: 700px) {
+
+            .sport,
+            .sport.inverse {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .sport img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mes centres d'intérêts</h1>
+    </header>
+    <section class="jeu">
+        <img src="image/skate-drift-foot.jpg" alt="Photo de mes jeux préférés">
+        <div class="texte">
+            <p>Depuis tout petit j'aime jouer aux jeux vidéos, ça m'a permis de développer un certain esprit de logique,
+                de
+                me détendre et de m'apprendre énormément sur la culture populaire. Le jeu vidéo m'a permis de prendre en
+                maturité, de créer du lien social etc...</p>
+        </div>
+
+    </section>
+
+    <section class="sport">
+        <div class="texte">
+            <p>
+                J'aime trop le surf ou les sports nautiques en règle générales et j'adore aussi nage. Pour l'anecdote
+                j'ai d'abord été sur une planche avant de savoir nager
+            </p>
+        </div>
+        <img src="image/surf-piscine.jpg " alt="vague et piscine">
+    </section>
+
+</body>
+
+</html>
