@@ -17,13 +17,14 @@
         header {
             text-align: center;
             padding: 2rem 1rem;
-            background: #e46adc;
+            background: linear-gradient(135deg, #ea51df, #cd95c8, #e46adc);
             color: white;
             border: 3px solid #000000;
             border-radius: 50px 50px 50px 50px;
             margin: 4rem;
             margin-top: 0.5rem;
         }
+
 
         header img {
             width: 130px;
@@ -32,6 +33,12 @@
             object-fit: cover;
             margin-bottom: 1rem;
             border: 3px solid #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
@@ -40,7 +47,19 @@
             max-width: 800px;
             margin: 0 auto;
             font-style: italic;
+            animation: glow 3s ease-in-out infinite alternate;
         }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #ff69b4, 0 0 20px #e46adc;
+            }
+
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 40px #e46adc;
+            }
+        }
+
 
         main {
             display: grid;
@@ -53,7 +72,7 @@
         }
 
         details {
-            background: #f1c5f1;
+            background: #e8bbe8;
             border: 2px solid #000000;
             border-radius: 10px;
             padding: 0.6rem 1rem;
@@ -61,9 +80,26 @@
             transition: box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
-        details[open] {
-            border-color: #0077ff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        details:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border-color: #555;
+        }
+
+        details[open]>*:not(summary) {
+            animation: slideDown 0.5s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity 1;
+                transform: trnaslateY(0);
+            }
         }
 
         summary {
@@ -101,22 +137,24 @@
         }
 
         details a:hover {
-            color: #0056b3;
+            color: #000000;
             text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <img src="image/photomoi.jpg" alt="Photo de profil">
+    <header role="banner">
+        <img src="image/photomoi.jpg" alt="Photo de profil de Hippolyte Speckens"
+            aria-label="Photo de Hippolyte Speckens">
         <figcaption id="figcation-hs">Hippolyte Speckens</figcaption>
-        <h1>« Ceux qui sont assez fous pour penser qu’ils peuvent changer le monde sont ceux qui le font. »- Steve Jobs
+        <h1 aria-label="Citation de Steve Jobs">« Ceux qui sont assez fous pour penser qu’ils peuvent changer le monde
+            sont ceux qui le font. »- Steve Jobs
         </h1>
     </header>
 
     <main>
-        <details>
+        <details aria-label="À propos de Hippolyte Speckens">
             <summary>À propos</summary>
             <p>Diplomé d'un Baccalauréat en STI2D, Mention Très Bien</p>
             <p>Adresse: 68 rue de Béthune</p>
@@ -124,7 +162,7 @@
             <p>Né le: 20/02/2007</p>
         </details>
 
-        <details>
+        <details aria-label="Compétences générales">
             <summary>Compétences générales</summary>
             <ul>
                 <li>Bonne communication orale et écrite</li>
@@ -136,8 +174,8 @@
             </ul>
         </details>
 
-        <details>
-            <summary>Compétences générales</summary>
+        <details aria-label="Compétences techniques">
+            <summary>Compétences techniques</summary>
             <ul>
                 <li>Bonne connaissance de la suite bureautique, Microsoft Project, Word, Power point</li>
                 <li>Maitrise de SolidWorks (3D)</li>
@@ -146,8 +184,8 @@
             </ul>
         </details>
 
-        <details>
-            <summary>Expériences</summary>
+        <details aria-label="Expériences professionnelles">
+            <summary>Expériences professionnelles</summary>
             <p>STAGES</p>
             <ul>
                 <li>Février 2022 / Accante</li>
@@ -160,7 +198,7 @@
             </ul>
         </details>
 
-        <details>
+        <details aria-label="Centre d'intérêt">
             <summary>Centre d'intérêt</summary>
             <ul>
                 <li>Jeux vidéo : sim racing, foot, skate..</li>
@@ -171,12 +209,14 @@
             </ul>
         </details>
 
-        <details>
+        <details aria-label="Contact">
             <summary>Contact</summary>
             <div class=" contact-info">
-                <p>Email : <a href="hippolytespeckens@gmail.com">hippolytespeckens@gmail.com</a></p>
+                <p>Email : <a href="hippolytespeckens@gmail.com"
+                        aria-label="Envoyer un mail à Hippolyte Speckens">hippolytespeckens@gmail.com</a></p>
                 <p>Téléphone : 06 98 69 20 31</p>
-                <p>GitHub : <a href="https://github.com/Hippolytespcks/mon-portfolio" target="_blank">Mon
+                <p>GitHub : <a href="https://github.com/Hippolytespcks/mon-portfolio" target="_blank" aria-label=""
+                        Ouvrir le profil GitHub de Hippolyte Speckens dans un nouvel onglet>Mon
                         GitHub</a></p>
             </div>
         </details>
