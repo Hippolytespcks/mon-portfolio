@@ -69,11 +69,11 @@ header:hover {
 .projets-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 4rem auto;
     width: 90%;
 }
 
-/* COLONNE GAUCHE */
 .projets-texte {
     width: 45%;
 }
@@ -97,49 +97,19 @@ header:hover {
     text-decoration: underline;
 }
 
-/* CARROUSEL */
-.carousel {
-    position: relative;
-    width: 45%;
-    height: 380px;
-    border: 4px solid black;
-    border-radius: 20px;
-    overflow: hidden;
-}
 
-/* IMAGES */
-.carousel-images img {
-    width: 100%;
-    height: 100%;
+.projet-image img {
+    width: 450px;
+    height: auto;
+    border-radius: 30px;
     object-fit: cover;
+    border: 5px solid #602a5a;
+}
+
+.projet-image img:hover {
+    transform: scale(1.07);
+}
+
+.projet-image figcaption {
     display: none;
-}
-
-.carousel-images img.active {
-    display: block;
-}
-
-/* FLECHES SIMPLES */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: black;
-    font-size: 3rem;
-    cursor: pointer;
-    padding: 0;
-}
-
-.arrow-left {
-    left: -40px;
-}
-
-.arrow-right {
-    right: -40px;
-}
-
-.arrow:hover {
-    transform: translateY(-50%) scale(1.1);
 }
