@@ -1,35 +1,49 @@
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+:root {
+    --primary: #e46adc;
+    --gradient: linear-gradient(135deg, #ea51df, #cd95c8, #e46adc);
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --border: 3px solid #000;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --radius: 20px;
+    --font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+body {
+    font-family: var(--font);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
 
 header {
     text-align: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font);
     font-size: 1rem;
-    background: #e46adc;
+    background: var(--primary);
     color: white;
-    border: 3px solid #000000;
-    border-radius: 50px 50px 50px 50px;
+    border: var(--border);
+    border-radius: 50px;
     margin: 4rem;
     margin-top: 0.5rem;
+    transition: transform 0.2s ease;
 }
 
 header:hover {
-    transform: scale(1.07)
+    transform: scale(1.07);
 }
 
 .top-banner {
-    background: linear-gradient(135deg, #ea51df, #cd95c8, #e46adc);
-    color: rgb(255, 255, 255);
+    background: var(--gradient);
+    color: white;
     padding: 0.8rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #000000;
+    box-shadow: var(--shadow);
+    border: var(--border);
 }
 
 .banner-content {
@@ -55,7 +69,7 @@ header:hover {
 }
 
 .nav-links a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     font-weight: 500;
     transition: transform 0.2s ease, color 0.2s ease;
@@ -63,5 +77,72 @@ header:hover {
 
 .nav-links a:hover {
     transform: scale(1.1);
-    color: #ffffff;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+.titre-projet {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.description-projet {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.bloc {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.bloc.reverse {
+    flex-direction: row-reverse;
+}
+
+.bloc figure {
+    flex: 1;
+}
+
+.bloc img {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 4px solid black;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.bloc figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+
+.bloc .texte {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+
+@media (max-width: 900px) {
+
+    .bloc,
+    .bloc.reverse {
+        flex-direction: column;
+    }
+
+    .titre-projet {
+        font-size: 2.4rem;
+    }
 }
