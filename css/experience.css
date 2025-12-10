@@ -29,7 +29,6 @@ h2 {
 
 .Accante {
     display: flex;
-    align-items: right;
     gap: 2rem;
     margin: 2rem auto;
     padding: 1rem;
@@ -89,7 +88,6 @@ h2 {
 
 .Archifix {
     display: flex;
-    align-items: right;
     gap: 2rem;
     margin: 2rem auto;
     padding: 1rem;
@@ -109,6 +107,8 @@ h2 {
     object-fit: cover;
     border: 5px solid #ea9b24;
     margin-left: 0;
+    width: 600px;
+    height: 150px;
 }
 
 .Archifix img:hover {
