@@ -73,7 +73,6 @@ details {
 }
 
 details:hover {
-    transform: scale(1.08);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     border-color: #555;
 }
@@ -90,7 +89,7 @@ details[open]>*:not(summary) {
 
     to {
         opacity: 1;
-        transform: trnaslateY(0);
+        transform: translateY(0);
     }
 }
 
